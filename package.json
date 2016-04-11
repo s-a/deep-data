@@ -1,0 +1,64 @@
+{
+  "name": "deep-data",
+  "version": "1.1.2",
+  "description": "",
+  "main": "lib/index.js",
+  "bin": {
+    "deep-data": "lib/index.js"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "bunyan": "^1.8.0",
+    "colors": "^1.1.2",
+    "commander": "^2.9.0",
+    "crypto": "0.0.3",
+    "glob": "^7.0.3",
+    "inquirer": "^1.0.0",
+    "install": "^0.6.1",
+    "minimist": "^1.2.0",
+    "npm": "^3.8.6",
+    "pretty-error": "^2.0.0",
+    "tedious": "^1.14.0",
+    "user-appdata": "^0.1.2",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "docco": "^0.7.0",
+    "jscoverage": "^0.6.0",
+    "mocha": "^2.4.5",
+    "mocha-jshint": "^2.3.1",
+    "should": "^8.3.0"
+  },
+  "scripts": {
+    "test": "node node_modules/mocha/bin/_mocha",
+    "debug-mocha": "iron-node node_modules/mocha/bin/_mocha",
+    "bump": "npm version patch && git push && git push --tags && npm publish",
+    "docs": "node node_modules/docco/bin/docco lib/client.js",
+    "coverage-lib-cov": "node node_modules/jscoverage/bin/jscoverage lib lib-cov",
+    "coverage-html": "node node_modules/mocha/bin/_mocha -R html-cov > coverage.html",
+    "coverage-cleanup": "rm lib-cov/*.*",
+    "coverage": "rm coverage.html && npm run coverage-lib-cov && npm run coverage-html && npm run coverage-cleanup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s-a/deep-data.git"
+  },
+  "keywords": [
+    "setup",
+    "config",
+    "configuration",
+    "settings",
+    "app-data",
+    "app_data",
+    "appdata",
+    "configs"
+  ],
+  "author": "Stephan Ahlf <stephan.ahlf@gmail.com> (https://github.com/s-a)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/s-a/deep-data/issues"
+  },
+  "homepage": "https://github.com/s-a/deep-data#readme"
+}
